@@ -1,6 +1,0 @@
-#!/bin/bash
-
-echo 'sshing to instituto aws server';
-
-ttab 'nvm use v10.13.0; npm run dev';
-rethinkdb --bind all;
