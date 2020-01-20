@@ -1,0 +1,39 @@
+{
+  "name": "atlas",
+  "version": "1.0.0",
+  "description": "tienda765 Backend API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon index | bunyan",
+    "prod": "NODE_ENV=production nodemon index | bunyan"
+  },
+  "author": "Esteban Muruzabal",
+  "engines": {
+    "node": "4.2.5",
+    "npm": "3.5.3"
+  },
+  "dependencies": {
+    "babel": "5.8.38",
+    "bcryptjs": "^2.4.3",
+    "bunyan": "1.8.0",
+    "dotenv": "^4.0.0",
+    "fast-csv": "1.1.0",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.0.5",
+    "hapi": "11.1.4",
+    "hapi-async-handler": "1.0.3",
+    "hapi-auth-jwt2": "5.8.0",
+    "hapi-swagger": "^6.2.2",
+    "inert": "3.2.0",
+    "joi": "6.10.1",
+    "jsonwebtoken": "5.7.0",
+    "node-uuid": "1.4.7",
+    "request": "2.71.0",
+    "rethinkdbdash": "2.2.18",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "bcryptjs": "^2.4.3",
+    "nodemon": "1.9.1"
+  }
+}

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Encomienda Pendiente</title>
+    <style>
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Hola {{data.order.customer.name}},</h1>
+<p>
+    Verificamos que su encomienda no ha sido pagada, por lo tanto aguardaremos el pago durante las proximas 48h.
+    En caso contrario, su encomienda sera cancelada.
+</p>
+<br />
+<p>
+    Si tiene alguna consulta, no dude en <a href="mailto:ventas@tienda765.com">contactarnos</a>.
+</p>
+<p>
+    <strong>Gracias por elegirnos</strong>
+</p>
+<hr>
+<footer>
+    Atte. el equipo de Tienda765
+    <br>
+    <a href="{{base.storefrontUrl}}">Tienda765.com</a>
+</footer>
+</body>
+</html>
