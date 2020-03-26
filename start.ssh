@@ -1,7 +1,9 @@
 #!/bin/bash
 
 echo 'starting backend and starting backend';
-touch uploads;
-touch uploads/contents;
+mkdir uploads;
+mkdir uploads/contents;
+mkdir uploads/products;
+
 ttab 'nvm use v10.13.0; npm run dev';
 rethinkdb --bind all;

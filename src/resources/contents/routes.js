@@ -12,10 +12,14 @@ import {
     ContentIdHandler,
     ContentCommentsHandler
 } from './handlers';
+import config from '../../config';
 
 /**
  * Routes
  */
+const firstLenguage = config.app.locale.available[0];
+const secondLenguage = config.app.locale.available[1];
+
 export default [
     {
         path: '',
@@ -115,8 +119,10 @@ export default [
                     enabled: Joi.boolean().required(),
                     collections: Joi.array().required(),
                     name: Joi.object({
-                        en: Joi.string().required(),
-                        es: Joi.string().required()
+                        [firstLenguage]: Joi.string().required(),
+                        ...(secondLenguage && {
+                            [secondLenguage]: Joi.string().required()
+                        }),
                     }).required(),
                     tags: Joi.array().required(),
                     metadata: Joi.object().required(),

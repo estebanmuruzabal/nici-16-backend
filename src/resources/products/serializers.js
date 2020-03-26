@@ -30,16 +30,6 @@ class ProductSerializer {
         stock: Joi.number(),
         tags: Joi.array(),
         collections: Joi.array(),
-        copies: Joi.object({
-            pagetype: Joi.string(),
-            pagesnum: Joi.number().precision(2),
-            files: Joi.array({
-                url: Joi.string()
-            }),
-            comments: Joi.string(),
-            price: Joi.number().precision(2),
-            anillado: Joi.boolean(),
-        }),
         metadata: Joi.object()
     };
 

@@ -5,7 +5,11 @@ export default {
         host: 'localhost',
         port: 8000,
         jwtKey: '1gak3RjrXhes/Z9okylMcxYLVY+7qVeSXhXQADzFmLg=',
-        defaultCurrency: 'ARS'
+        defaultCurrency: 'ARS',
+        locale: {
+            available: ['es'],
+            default: 'es'
+        },
     },
     database: {
         servers: [

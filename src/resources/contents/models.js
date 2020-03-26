@@ -16,7 +16,8 @@ const tables = {
  */
 const ContentType = {
     ARTICLE: 'article',
-    BANNER: 'banner'
+    BANNER: 'banner',
+    HEADER_DESKTOP_LOGO: 'headerDesktopLogo'
 };
 
 /**
@@ -28,6 +29,10 @@ const ContentBodyBase = {
         summary: {}
     },
     [ContentType.BANNER]: {
+        image: {},
+        link: ''
+    },
+    [ContentType.HEADER_DESKTOP_LOGO]: {
         image: {},
         link: ''
     }

@@ -9,10 +9,14 @@ import {
     ProductIdHandler,
     ProductsUploadHandler
 } from './handlers';
+import config from '../../config';
 
 /**
  * Routes
  */
+const firstLenguage = config.app.locale.available[0];
+const secondLenguage = config.app.locale.available[1];
+
 export default [
     {
         path: '',
@@ -58,8 +62,10 @@ export default [
                 payload: {
                     sku: Joi.string().required(),
                     name: Joi.object({
-                        en: Joi.string().required(),
-                        es: Joi.string().required()
+                        [firstLenguage]: Joi.string().required(),
+                        ...(secondLenguage && {
+                            [secondLenguage]: Joi.string().required()
+                        }),
                     }).required()
                 }
             }
@@ -129,12 +135,16 @@ export default [
                     enabled: Joi.boolean().required(),
                     sku: Joi.string().required(),
                     name: Joi.object({
-                        en: Joi.string().required(),
-                        es: Joi.string().required()
+                        [firstLenguage]: Joi.string().required(),
+                        ...(secondLenguage && {
+                            [secondLenguage]: Joi.string().required()
+                        }),
                     }).required(),
                     description: Joi.object({
-                        en: Joi.string().required(),
-                        es: Joi.string().required()
+                        [firstLenguage]: Joi.string().required(),
+                        ...(secondLenguage && {
+                            [secondLenguage]: Joi.string().required()
+                        }),
                     }).required(),
                     images: Joi.array({
                         url: Joi.string().required()
@@ -148,17 +158,6 @@ export default [
                     stock: Joi.number().required(),
                     tags: Joi.array().required(),
                     collections: Joi.array().required(),
-                    copies: Joi.object({
-                        pagetype: Joi.string().allow('').required(),
-                        pagesnum: Joi.number().precision(2).required(),
-                        files: Joi.array({
-                            url: Joi.string().required()
-                        }).required(),
-                        comments: Joi.string().allow('').optional(),
-                        price: Joi.number().precision(2).required(),
-                        anillado: Joi.boolean().required(),
-                        doblefaz: Joi.boolean().required(),
-                    }).optional(),
                     metadata: Joi.object().required()
                 }
             }
