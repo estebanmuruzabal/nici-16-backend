@@ -4,6 +4,7 @@ export default {
     app: {
         host: 'localhost',
         port: 8000,
+        appName: 'Ringo Motos',
         jwtKey: '1gak3RjrXhes/Z9okylMcxYLVY+7qVeSXhXQADzFmLg=',
         defaultCurrency: 'ARS',
         locale: {
