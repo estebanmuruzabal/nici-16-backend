@@ -11,8 +11,8 @@ config.logs.streams = [
     }
 ];
 config.uploads.folder = '/uploads';
-config.uploads.baseUrl = 'ringomotos.com/files';
-config.storefront.baseUrl = 'http://ringomotos.com';
+config.uploads.baseUrl = 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com';
+config.storefront.baseUrl = 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com';
 config.switchPayments.baseUrl = 'http://api.switchpayments.com/v2';
 
 // Export

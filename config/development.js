@@ -42,8 +42,8 @@ export default {
         }
     },
     storefront: {
-        label: 'tienda765.com',
-        baseUrl: 'http://tienda765.com',
+        label: 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com',
+        baseUrl: 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com',
         defaultLocale: 'es'
     },
     switchPayments: {
