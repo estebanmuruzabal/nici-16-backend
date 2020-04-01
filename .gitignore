@@ -2,5 +2,7 @@ node_modules
 rethinkdb_data
 heapdump-*
 logs
-uploads
+!.uploads/contents/
+uploads/contents/*
+uploads/products/*
 .idea
