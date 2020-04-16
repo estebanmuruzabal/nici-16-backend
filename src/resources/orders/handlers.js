@@ -112,8 +112,8 @@ class OrdersHandler {
             if (err.name === ErrorName.PERMISSION_DENIED) {
                 return reply(BadRequest.invalidParameters('payload', {checkoutId: ['Invalid #2']})).code(400);
             } else {
-                log.error({where: 'OrdersHandler.post'}, 'Unable to get checkout');
-                log.error(err);
+                console.log({where: 'OrdersHandler.post'}, 'Unable to get checkout');
+                console.log(err);
                 return reply().code(500);
             }
         }
@@ -189,7 +189,7 @@ class OrderIdHandler {
                     if (err.name === ErrorName.VALIDATION_ERROR) {
                         return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
                     } else {
-                        log.error(err, `Unable to update order "${orderId}" status`);
+                        console.log(err, `Unable to update order "${orderId}" status`);
                         return reply().code(500);
                     }
                 }
@@ -322,7 +322,7 @@ class OrderEmailHandler {
         sendEmailTemplate(template, to, data, subject).then(function () {
             return reply().code(201);
         }, function (err) {
-            log.error(err, `Unable to send "${template.id}" email`);
+            console.log(err, `Unable to send "${template.id}" email`);
             return reply().code(500);
         });
     }

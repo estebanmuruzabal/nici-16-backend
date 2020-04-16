@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Bienvenido a Tienda 765</title>
+    <title>Bienvenido a {{base.storefrontUrl}}</title>
     <style>
         footer {
             text-align: center;
@@ -15,23 +15,23 @@
 </p>
 <h2>¿Para qué sirve?</h2>
 <p>
-    Tener una cuenta en Tienda765 permite acelerar el proceso de compra y guardar su domicilio de envío y facturación. Para su próxima compra, solamente deberá seleccionar el método de envío y pago! Simple no?
+    Tener una cuenta en {{base.storefrontUrl}} permite acelerar el proceso de compra y guardar su domicilio de envío y facturación. Para su próxima compra, solamente deberá seleccionar el método de envío y pago! Simple no?
 </p>
 <p>
     También podrá visualizar el historial de pedidos y sus detalles.
 </p>
 <h2>¿Dudas?</h2>
 <p>
-    Contáctenos por cualquier duda o consulta al número 3624201230 o al siguiente mail :
+    Contáctenos por cualquier duda o consulta al número {{base.phoneNumber}} o al siguiente mail :
     <br>
-    <a href="mailto:contacto@bananacat.co">contacto@bananacat.co</a> Si.. ".co", y no es un error!
+    <a href="mailto:{{base.helpEmailAddress}}">{{base.helpEmailAddress}}</a>
 
 </p>
 <hr>
 <footer>
-    Atte. El equipo de Tienda 765
+    Atte. El equipo de {{base.storefrontUrl}}
     <br>
-    <a href="{{base.storefrontUrl}}">Tienda765.com</a>
+    <a href="{{base.storefrontUrl}}">{{base.storefrontLabel}}</a>
 </footer>
 </body>
 </html>

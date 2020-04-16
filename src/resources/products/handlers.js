@@ -104,7 +104,7 @@ class ProductsHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to create product');
+                console.log(err, 'Unable to create product');
                 return reply().code(500);
             }
         }
@@ -150,7 +150,7 @@ class ProductIdHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to update product');
+                console.log(err, 'Unable to update product');
                 return reply().code(500);
             }
         }
@@ -175,7 +175,7 @@ class ProductIdHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to delete product');
+                console.log(err, 'Unable to delete product');
                 return reply().code(500);
             }
         }

@@ -2,7 +2,7 @@
 import config from './development';
 
 // Override configurations for Production environment
-config.app.routePrefix = '/api';
+// config.app.routePrefix = '/api';
 config.logs.folder = '/var/log';
 config.logs.streams = [
     {
@@ -10,9 +10,9 @@ config.logs.streams = [
         path: config.logs.folder + '/atlas.log'
     }
 ];
-config.uploads.folder = '/uploads';
-config.uploads.baseUrl = 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com';
-config.storefront.baseUrl = 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com';
+config.uploads.folder = path.join(process.cwd(), 'uploads');
+config.uploads.baseUrl = 'http://ringomotos.com';
+config.storefront.baseUrl = 'http://ringomotos.com';
 config.switchPayments.baseUrl = 'http://api.switchpayments.com/v2';
 
 // Export

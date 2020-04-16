@@ -128,7 +128,7 @@ server.register(require('hapi-auth-jwt2'), function (err) {
  * Log server errors
  */
 server.on('request-error', function (request, err) {
-    log.error(err, 'Server Error');
+    console.log(err, 'Server Error');
 });
 
 /**

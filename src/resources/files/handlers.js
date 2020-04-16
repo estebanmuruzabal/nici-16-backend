@@ -17,7 +17,7 @@ class FileHandlers {
 
         // Validate payload
         if (['collections', 'contents', 'products'].indexOf(request.payload.resource) === -1) {
-            log.error(request, 'Invalid request');
+            console.log(request, 'Invalid request');
             return reply(BadRequest.invalidParameters('request', {resource: ['Invalid']})).code(400);
         }
 
@@ -26,7 +26,7 @@ class FileHandlers {
             let result = await processUpload(request.payload.resource, request.payload.file);
             return reply(result).code(201);
         } catch (err) {
-            log.error(err, 'Unable to process file upload');
+            console.log(err, 'Unable to process file upload');
             return reply().code(500);
         }
     }

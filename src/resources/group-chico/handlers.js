@@ -32,7 +32,7 @@ class GroupChicoHandler {
             if (err) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to create group');
+                console.log(err, 'Unable to create group');
                 return reply().code(500);
             }
         }
@@ -92,7 +92,7 @@ class GroupChicoIdHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to delete group');
+                console.log(err, 'Unable to delete group');
                 return reply().code(500);
             }
         }

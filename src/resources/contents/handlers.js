@@ -33,7 +33,7 @@ class ContentsHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('query', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to create new content');
+                console.log(err, 'Unable to create new content');
                 return reply().code(500);
             }
         }
@@ -51,7 +51,7 @@ class ContentsHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to create new content');
+                console.log(err, 'Unable to create new content');
                 return reply().code(500);
             }
         }

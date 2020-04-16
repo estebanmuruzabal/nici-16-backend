@@ -25,7 +25,7 @@ function processUpload(resource, file) {
 
         // Make sure filename is unique
         let name = `${uuid.v4()}-${file.hapi.filename}`;
-        let folder = path.join(config.uploads.folder, resource);
+        let folder = path.join(config.uploads.baseUrl, config.uploads.folder, resource);
 
         // Open file for writing
         let fileStream = fs.createWriteStream(path.join(folder, name));

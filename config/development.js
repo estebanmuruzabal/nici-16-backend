@@ -37,12 +37,13 @@ export default {
     },
     emails: {
         from: {
-            name: 'tienda765.com',
-            email: 'contacto@bananacat.co'
+            name: 'ringomotos.com',
+            email: 'Ringo_moto_ra@hotmail.com',
+            phone: '3624651317'
         }
     },
     storefront: {
-        label: 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com',
+        label: 'Ringo Motos',
         baseUrl: 'http://ec2-18-228-42-125.sa-east-1.compute.amazonaws.com',
         defaultLocale: 'es'
     },

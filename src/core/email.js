@@ -91,7 +91,8 @@ function sendTemplate(template, to, data, subject) {
                 let base = {
                     storefrontLabel: config.storefront.label,
                     storefrontUrl: config.storefront.baseUrl,
-                    helpEmailAddress: config.emails.from.email
+                    helpEmailAddress: config.emails.from.email,
+                    phoneNumber: config.emails.from.phone
                 };
                 let html = Handlebars.compile(source)({base, data});
                 await sendEmail(from, to, subject || template.subject, null, html);

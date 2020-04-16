@@ -32,7 +32,7 @@ class GroupGrandeHandler {
             if (err) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to create GroupGrande');
+                console.log(err, 'Unable to create GroupGrande');
                 return reply().code(500);
             }
         }
@@ -92,7 +92,7 @@ class GroupGrandeIdHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to delete GroupGrande');
+                console.log(err, 'Unable to delete GroupGrande');
                 return reply().code(500);
             }
         }

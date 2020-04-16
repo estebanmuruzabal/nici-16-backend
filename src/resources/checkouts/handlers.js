@@ -46,8 +46,8 @@ class CheckoutsHandler {
             if (err.name === ErrorName.PERMISSION_DENIED) {
                 return reply(BadRequest.invalidParameters('payload', {cartId: ['Invalid']})).code(400);
             } else {
-                log.error({where: 'CheckoutsHandler.post'}, 'Unable to get cart');
-                log.error(err);
+                console.log({where: 'CheckoutsHandler.post'}, 'Unable to get cart');
+                console.log(err);
                 return reply().code(500);
             }
         }

@@ -159,7 +159,7 @@ class Product {
         if (products.length == 1) {
             return products[0];
         } else if (products.length > 1) {
-            log.error({sku}, 'More than one product with same SKU');
+            console.log({sku}, 'More than one product with same SKU');
             throw new ValidationError('sku', 'More than one product with same SKU');
         } else {
             return null;

@@ -24,7 +24,7 @@ class JWTAuthentication {
         try {
             var user = await User.get(decoded.id);
         } catch (err) {
-            log.error(err, 'Unable to validate JWT');
+            console.log(err, 'Unable to validate JWT');
             return callback(null, false);
         }
 

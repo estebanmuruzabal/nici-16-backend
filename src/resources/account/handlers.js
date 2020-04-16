@@ -143,10 +143,10 @@ class AccountRegisterHandlers {
             }).then(function () {
                 User.updateStatus(user.id, UserStatus.PENDING_CONFIRMATION);
             }, function (err) {
-                log.error(err, 'Unable to send account confirmation email');
+                console.log(err, 'Unable to send account confirmation email');
             });
         } catch (err) {
-            log.error(err, 'Unable to create activation token');
+            console.log(err, 'Unable to create activation token');
         }
     }
 
@@ -173,7 +173,7 @@ class AccountRegisterHandlers {
 
         // a) If a valid JWT token was created, then a respective user MUST exist
         if (!user) {
-            log.error({decodedToken}, 'Unable to find user of given JWT confirmation!');
+            console.log({decodedToken}, 'Unable to find user of given JWT confirmation!');
             return reply().code(500);
         }
         // b) User must be pending activation
@@ -185,7 +185,7 @@ class AccountRegisterHandlers {
         else {
             var confirmationToken = user.confirmationTokens.find(at => at.token === decodedToken.token);
             if (!confirmationToken) {
-                log.error({decodedToken}, 'Confirmation token not found in user!');
+                console.log({decodedToken}, 'Confirmation token not found in user!');
                 return reply().code(500);
             } else if (confirmationToken.type !== ConfirmationToken.ACTIVATE_ACCOUNT) {
                 log.warn({decodedToken}, 'Attempt to confirm account with invalid token type');
@@ -249,10 +249,10 @@ class AccountResetHandlers {
                 name: user.name,
                 url: `${config.storefront.baseUrl}/${config.storefront.defaultLocale}/reset/confirm/${resetToken}`
             }).then(function () {}, function (err) {
-                log.error(err, 'Unable to send account reset email');
+                console.log(err, 'Unable to send account reset email');
             });
         } catch (err) {
-            log.error(err, 'Unable to create reset token');
+            console.log(err, 'Unable to create reset token');
         }
     }
 
@@ -279,7 +279,7 @@ class AccountResetHandlers {
 
         // a) If a valid JWT token was created, then a respective user MUST exist
         if (!user) {
-            log.error({decodedToken}, 'Unable to find user of given JWT password reset!');
+            console.log({decodedToken}, 'Unable to find user of given JWT password reset!');
             return reply().code(500);
         }
         // b) User must be active
@@ -291,7 +291,7 @@ class AccountResetHandlers {
         else {
             var resetToken = user.confirmationTokens.find(at => at.token === decodedToken.token);
             if (!resetToken) {
-                log.error({decodedToken}, 'Reset token not found in user!');
+                console.log({decodedToken}, 'Reset token not found in user!');
                 return reply().code(500);
             } else if (resetToken.type !== ConfirmationToken.RESET_PASSWORD) {
                 log.warn({decodedToken}, 'Attempt to reset account with invalid token type');

@@ -26,7 +26,7 @@ export default {
                 if (err.name === ErrorName.PERMISSION_DENIED) {
                     return reply().code(403).takeover();
                 } else {
-                    log.error(err, 'Unable to get cart');
+                    console.log(err, 'Unable to get cart');
                     return reply().code(500).takeover();
                 }
             }

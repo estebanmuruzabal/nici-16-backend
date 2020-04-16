@@ -87,7 +87,7 @@ class CollectionIdHandler {
             if (err.name === ErrorName.VALIDATION_ERROR) {
                 return reply(BadRequest.invalidParameters('payload', {[err.param]: [err.message]})).code(400);
             } else {
-                log.error(err, 'Unable to delete collection');
+                console.log(err, 'Unable to delete collection');
                 return reply().code(500);
             }
         }
