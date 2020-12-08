@@ -18,7 +18,7 @@
     "bunyan": "^1.8.12",
     "dotenv": "^4.0.0",
     "dtrace-provider": "^0.8.8",
-    "fast-csv": "1.1.0",
+    "fast-csv": "4.3.6",
     "fs": "0.0.1-security",
     "handlebars": "^4.0.5",
     "hapi": "11.1.4",
