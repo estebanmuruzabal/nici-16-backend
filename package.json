@@ -20,7 +20,7 @@
     "dtrace-provider": "^0.8.8",
     "fast-csv": "1.1.0",
     "fs": "0.0.1-security",
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.7.7",
     "hapi": "11.1.4",
     "hapi-async-handler": "1.0.3",
     "hapi-auth-jwt2": "5.8.0",
