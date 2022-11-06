@@ -13,7 +13,7 @@
     "npm": "3.5.3"
   },
   "dependencies": {
-    "babel": "5.8.38",
+    "babel": "6.23.0",
     "bcryptjs": "^2.4.3",
     "bunyan": "^1.8.12",
     "dotenv": "^4.0.0",
