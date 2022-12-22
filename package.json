@@ -27,7 +27,7 @@
     "hapi-swagger": "^6.2.2",
     "inert": "3.2.0",
     "joi": "6.10.1",
-    "jsonwebtoken": "5.7.0",
+    "jsonwebtoken": "9.0.0",
     "node-uuid": "1.4.7",
     "request": "^2.88.0",
     "rethinkdbdash": "2.2.18",
